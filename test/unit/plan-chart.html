@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>plan-chart tests</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+  <script src="../../node_modules/wct-browser-legacy/browser.js"></script>
+
+  <!-- Import the element to test -->
+  <script type="module" src="../../plan-chart.js"></script>
+</head>
+<body>
+<test-fixture id="basic">
+  <template>
+    <plan-chart mood="great"></plan-chart>
+  </template>
+</test-fixture>
+
+<script type="module">
+  import 'axe-core/axe.min.js';
+  import {axeReport} from 'pwa-helpers/axe-report.js';
+
+  suite('counter-element tests', function() {
+    let sut;
+
+    setup(function() {
+      sut = fixture('basic');
+      // Make tests wait until element is rendered.
+      return sut.updateComplete;
+    });
+
+    test('starts empty', function() {
+      assert.equal(sut.mood, 'great');
+    });
+
+    test('a11y', function() {
+      return axeReport(sut);
+    });
+  });
+</script>
+</body>
+</html>

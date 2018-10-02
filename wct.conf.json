@@ -1,0 +1,17 @@
+{
+  "npm": true,
+  "moduleResolution": "node",
+  "plugins": {
+    "local": {
+      "browserOptions": {
+        "chrome": [
+          "disable-gpu",
+          "no-sandbox"
+        ],
+        "firefox": [
+          "-headless"
+        ]
+      }
+    }
+  }
+}

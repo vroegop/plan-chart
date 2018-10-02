@@ -1,0 +1,35 @@
+{
+  "root": ".",
+  "entrypoint": "index.html",
+  "shell": "plan-chart.js",
+  "fragments": [
+  ],
+  "sources": [
+  ],
+  "extraDependencies": [
+    "node_modules/@webcomponents/webcomponentsjs/**"
+  ],
+  "moduleResolution": "node",
+  "npm": true,
+  "builds": [
+    {
+      "name": "es5prod",
+      "preset": "es5-bundled",
+      "addServiceWorker": true
+    },
+    {
+      "name": "es6prod",
+      "preset": "es6-unbundled",
+      "addServiceWorker": true
+    },
+    {
+      "name": "dev",
+      "addServiceWorker": false,
+      "js": {"minify": false, "compile": false},
+      "css": {"minify": false},
+      "html": {"minify": false},
+      "bundle": false,
+      "addPushManifest": false
+    }
+  ]
+}
