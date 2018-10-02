@@ -8,6 +8,9 @@
   "directories": {
     "test": "test"
   },
+  "engine": {
+    "node": ">=8.0"
+  },
   "scripts": {
     "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "build": "tsc",
