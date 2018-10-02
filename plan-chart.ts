@@ -1,7 +1,6 @@
 import {LitElement, html, property} from '@polymer/lit-element/lit-element';
 
 class PlanChart extends LitElement {
-
   @property() mood = '';
 
   render() {
