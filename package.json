@@ -17,7 +17,7 @@
     "install-test-globals": "npm i -g web-component-tester",
     "install-typescript-globals": "npm i -g typescript tslint",
     "lint": "tslint -c tslint.json -p tsconfig.json",
-    "test": "npm run build && wct -b chrome"
+    "test": "npm run build && wct"
   },
   "dependencies": {
     "@polymer/lit-element": "^0.6.1",
