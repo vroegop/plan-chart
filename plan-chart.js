@@ -11,8 +11,8 @@ class PlanChart extends LitElement {
         this.mood = '';
     }
     render() {
-        return html `<style> .mood { color: #ffffff; } </style>
-          Web Components are <span class="mood">${this.mood}</span><button></button>!`;
+        return html `<style> .mood { color: green; } </style>
+          Web Components are <span class="mood">${this.mood}</span>!`;
     }
 }
 __decorate([

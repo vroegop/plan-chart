@@ -11,6 +11,9 @@
   "scripts": {
     "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "build": "tsc",
+    "install-test-globals": "npm i -g web-component-tester",
+    "install-typescript-globals": "npm i -g typescript tslint",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
     "test": "npm run build && wct"
   },
   "dependencies": {
@@ -20,8 +23,6 @@
   "devDependencies": {
     "axe-core": "^3.1.2",
     "pwa-helpers": "^0.8.4",
-    "typescript": "^3.1.1",
-    "wct-browser-legacy": "^1.0.1",
-    "web-component-tester": "^6.8.0"
+    "wct-browser-legacy": "^1.0.1"
   }
 }

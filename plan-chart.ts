@@ -4,7 +4,7 @@ class PlanChart extends LitElement {
 
   @property() mood = '';
 
-  render(){
+  render() {
     return html`<style> .mood { color: green; } </style>
           Web Components are <span class="mood">${this.mood}</span>!`;
   }
