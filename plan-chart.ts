@@ -1,11 +1,29 @@
-import {LitElement, html, property} from '@polymer/lit-element/lit-element';
+import {html, LitElement, property} from '@polymer/lit-element/lit-element';
+import '@webcomponents/shadycss/entrypoints/apply-shim.js';
 
+/**
+ *
+ * @Demo demo/index.html
+ */
 class PlanChart extends LitElement {
-  @property() mood = '';
+  @property() yearplan: Object = {};
+
+  get styles() {
+    return html`
+      <style>
+        :host {
+          --background: #eee;
+
+          background-color: var(--background);
+          display:flex;
+          justify-content: center;
+        }
+      </style>`;
+  }
 
   render() {
-    return html`<style> .mood { color: green; } </style>
-          Web Components are <span class="mood">${this.mood}</span>!`;
+    return html`${this.styles}
+      <pre><code>${JSON.stringify(this.yearplan, null, 4)}</code></pre>`;
   }
 }
 

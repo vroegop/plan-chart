@@ -14,7 +14,7 @@
 <body>
 <test-fixture id="basic">
   <template>
-    <plan-chart mood="great"></plan-chart>
+    <plan-chart></plan-chart>
   </template>
 </test-fixture>
 
@@ -32,7 +32,7 @@
     });
 
     test('starts empty', function() {
-      assert.equal(sut.mood, 'great');
+      assert.deepEqual(sut.yearplan, {});
     });
 
     test('a11y', function() {

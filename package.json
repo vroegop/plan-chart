@@ -12,12 +12,15 @@
     "node": ">=8.0"
   },
   "scripts": {
+    "start": "concurrently 'tsc -w' 'polymer serve -o'",
     "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "build": "tsc",
-    "install-test-globals": "npm i -g web-component-tester",
-    "install-typescript-globals": "npm i -g typescript tslint",
+    "install:global": "npm run install:test-g && npm run install:ts-g && npm run install:server",
+    "install:test-g": "npm i -g web-component-tester",
+    "install:ts-g": "npm i -g typescript tslint",
+    "install:server": "npm i -g concurrently polymer-cli",
     "lint": "tslint -c tslint.json -p tsconfig.json",
-    "test": "npm run build && wct"
+    "test": "npm run build && wct --skip-selenium-install"
   },
   "dependencies": {
     "@polymer/lit-element": "^0.6.1",
