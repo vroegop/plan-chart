@@ -7,9 +7,6 @@
         "chrome": [
           "disable-gpu",
           "no-sandbox"
-        ],
-        "firefox": [
-          "-headless"
         ]
       }
     }
